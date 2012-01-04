@@ -84,8 +84,8 @@ public class PathPoint {
     }
 
     /**
-     * Constructs and returns a PathPoint object that describes a curve to the given xy location
-     * with the control points at c0 and c1.
+     * Constructs and returns a PathPoint object that describes a cubic BŽzier curve to the
+     * given xy location with the control points at c0 and c1.
      */
     public static PathPoint curveTo(float c0X, float c0Y, float c1X, float c1Y, float x, float y) {
         return new PathPoint(c0X,  c0Y, c1X, c1Y, x, y);

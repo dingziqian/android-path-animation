@@ -23,7 +23,7 @@ import java.util.Collection;
  * a path. The API allows you to specify a move location (which essentially
  * jumps from the previous point in the path to the new one), a line location
  * (which creates a line segment from the previous location) and a curve
- * location (which creates a BŽzier curve from the previous location).
+ * location (which creates a cubic BŽzier curve from the previous location).
  */
 public class AnimatorPath {
     
@@ -50,9 +50,9 @@ public class AnimatorPath {
     }
 
     /**
-     * Create a quadratic BŽzier curve from the current path point to the new one
+     * Create a cubic BŽzier curve from the current path point to the new one
      * specified by x and y. The curve uses the current path location as the first anchor
-     * point, the control points (c0X, c0Y) and (c1X, c1Y), and (x, y) as the end anchor.
+     * point, the control points (c0X, c0Y) and (c1X, c1Y), and (x, y) as the end anchor point.
      */
     public void curveTo(float c0X, float c0Y, float c1X, float c1Y, float x, float y) {
         mPoints.add(PathPoint.curveTo(c0X, c0Y, c1X, c1Y, x, y));
